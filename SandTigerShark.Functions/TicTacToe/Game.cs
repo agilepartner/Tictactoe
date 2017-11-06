@@ -54,7 +54,7 @@ namespace SandTigerShark.Functions.TicTacToe
         {
             if (!IsGameOver)
             {
-                var otherPlayer = player == player1 ? player1 : player2;
+                var otherPlayer = player == player1 ? player2 : player1;
                 return Board.Count(v => v == player) <= Board.Count(v => v == otherPlayer);
             }
             return false;
