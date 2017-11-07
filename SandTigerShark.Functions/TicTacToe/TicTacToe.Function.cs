@@ -33,9 +33,11 @@ namespace SandTigerShark.Functions.TicTacToe
 
                 return req.CreateResponse(HttpStatusCode.OK, new
                 {
-                    game.Board
+                    game.Board,
+                    GameOver = game.IsGameOver,
+                    Winner = game.Winner
                 });
-            }//TODO : implements Status code logic here
+            }
             catch(Exception e)
             {
                 return req.CreateResponse(HttpStatusCode.BadRequest, new
